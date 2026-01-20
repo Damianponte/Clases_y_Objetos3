@@ -5,10 +5,14 @@ public class Coche {
     //  La velocidad nunca puede ser menor que cero ni mayor que la máxima.
     //  Añade un método mostrarVelocidad. Desde el main, crea un coche y simula varios cambios de velocidad.
 
+
+    //principio de encapsulamiento.
    private String nombreMarca;
    private int velocidad;
    private int velocidadMaxixma;
 
+
+        //cuando se llama a los metodos es  el principio de ocultacion:
     public Coche(String nombreMarca) {
         this.nombreMarca = nombreMarca;
         this.velocidad = 0;
