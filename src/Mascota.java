@@ -41,10 +41,12 @@ public class Mascota {
     }
 
     public void mostrarEstado(){
-        if (hambre==100){
-            System.out.println(getNombre() + " no tiene hambre esta lleno " + getHambre());
+        if (hambre>=0){
+            System.out.println(getNombre() + " tiene hambre " + getHambre());
+        }else if (hambre==100){
+            System.out.println(getNombre() + " no  tiene " + getHambre());
         }else{
-            System.out.println(getNombre() + "  tiene " + getHambre() + " de hambre");
+            System.out.println("parametro nulo");
         }
 
     }
