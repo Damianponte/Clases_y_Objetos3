@@ -6,36 +6,43 @@ public class Ascensor {
     //   Añade un método mostrarPlanta.
     //    Desde el main, simula varios movimientos del ascensor
 
+
+
     private int plantaActual;
 
 
-    public Ascensor(int plantaInicial) {
-        this.plantaActual=0;
-
-    }
-
-    public void aumentarPlanta(int aumentar){
-
-        plantaActual=plantaActual + aumentar;
-        if (plantaActual>=10){
-            plantaActual=10;
+    public Ascensor(int plantainicial) {
+        if(plantainicial<0){
+            this.plantaActual=0;
+        }else if (plantainicial>10){
+            this.plantaActual=10;
+        }else{
+            this.plantaActual=plantainicial;
         }
+
     }
-
-    public void decrementarPlanta(int decrementar){
-
-        plantaActual=plantaActual + decrementar;
-        if (plantaActual<=0){
-            plantaActual=0;
-        }
-    }
-
     public int getPlantaActual() {
         return plantaActual;
     }
 
-    public void mostrarPlanta(){
-        System.out.println("el ascensor esta en la planta " + getPlantaActual());
+    public void aumentarPlanta(){
+
+        plantaActual++;
+        if (getPlantaActual()>10){
+            plantaActual=10;
+            System.out.println("no puedes subir mas de diez plantas");
+        }
     }
 
+    public void decrementarPlanta(){
+        plantaActual--;
+        if (getPlantaActual()<0){
+            plantaActual=0;
+            System.out.println("no puedes bajar mas de de la  planta 0");
+        }
+    }
+
+    public void mostrarPlanta(){
+        System.out.println("el ascensor esta en la planta :" + getPlantaActual());
+    }
 }
