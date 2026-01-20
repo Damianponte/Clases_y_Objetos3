@@ -13,9 +13,13 @@ public class Coche {
         this.nombreMarca = nombreMarca;
         this.velocidad = 0;
         this.velocidadMaxixma = 100;
-
-
     }
+    public Coche(String nombreMarca, int vmax) {
+        this.nombreMarca = nombreMarca;
+        this.velocidad = 0;
+        this.velocidadMaxixma = vmax;
+    }
+
     public void acelerar(int incremento){
         velocidad =velocidad +  incremento;
         if (velocidad > velocidadMaxixma) {

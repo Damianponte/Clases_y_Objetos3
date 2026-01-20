@@ -8,6 +8,7 @@ public class MainCoche {
         //  Añade un método mostrarVelocidad. Desde el main, crea un coche y simula varios cambios de velocidad.
 
         Coche vehiculo1=new Coche("BMW");
+        Coche vehiculo3=new Coche("BMW",150);
 
         System.out.println("el " + vehiculo1.getNombreMarca() + " tiene una velocidad de " + vehiculo1.getVelocidad());
 
