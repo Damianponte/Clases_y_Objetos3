@@ -10,7 +10,7 @@ public class MainReproducirMusica {
         cancion.descenderVolumen(70);
         cancion.MostrarEstado();
 
-        
+
 
 
     }
